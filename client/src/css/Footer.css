@@ -1,0 +1,30 @@
+html,body {
+  z-index: 10;
+  overflow-x: hidden;
+}
+
+.github-icon-footer i {
+    cursor:pointer;
+    color: white;
+    margin-left: 0.9rem;
+    transition: 0.3s ease-in-out;
+  }
+  .github-icon-footer i:hover{
+    transform: scale(1.1);
+    color: rgb(22, 182, 22);
+  }
+  .footer-container{
+    margin: 0;
+    overflow-x: auto;
+
+    color: rgb(255, 255, 255);
+    background-color: #181818;
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+
+  

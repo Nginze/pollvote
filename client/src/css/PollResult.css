@@ -1,0 +1,190 @@
+.option{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 39vw;
+    border: none;
+    margin-right: 5rem;
+    margin-bottom: 8vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+    
+}
+.result-header{
+ width: 50vw;
+ font-size: 5ch;
+ text-align: justify;
+ margin-right: 8rem;
+ flex-wrap: wrap;
+
+}
+.result-header span{
+    font-size: 0.7ch;
+    color: rgba(189, 188, 188, 0.651);
+}
+
+.result-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.display{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 18rem;
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-top: 2.5rem;
+    margin-bottom: -2rem;
+   
+}
+.vote-data{
+    margin-top: -4rem;
+    margin-bottom: 3rem;
+}
+.vote-data span{
+    color:gray;
+    text-align: justify;
+    font-size: 2ch;
+}
+.vote-data h2{
+    font-size: 4ch;
+}
+.vote-data hr{
+    width:17vw;
+    
+}
+
+.submit-vote{
+    background-color: rgb(71, 163, 71);
+    color: white;
+    padding: 1.6rem 5.4rem;
+    border-radius: 10px;
+    font-size: 2ch;
+}
+
+.option span{
+    margin-left: 0.6rem;
+}
+.share-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-links span{
+    font-weight: 600;
+    margin-top: -2rem ;
+    margin-bottom: 2rem;
+    color: gray;
+}
+
+.share-links button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(255, 118, 6);
+    font-size: 1.5ch;
+    font-weight: 600;
+}
+
+.vote-alert{
+    height: 4.5rem;
+    font-size: 1.6ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin-bottom: -1.7rem;
+    border-radius: 5px;
+    background-color: rgb(166, 212, 255);
+}
+
+.vote-alert i{
+    font-size: larger;
+    margin: 0.4rem;
+}
+.highest-vote{
+    margin-left: 2rem;
+    border: 3.4px solid rgba(59, 219, 59, 0.616);
+    box-shadow: rgba(0, 255, 76, 0.253) 0px 7px 29px 0px;
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 1.5rem;
+    background-color: rgb(233, 233, 233);
+    
+}
+
+
+.copy button{
+    cursor: pointer;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1.3rem;
+    font-size: 1.5ch;
+    font-weight: 600;
+}
+.close:hover{
+    background-color: #636363;
+    color: white;
+    border-radius: 2000px;
+}
+.copy p{
+    font-size: 1.4ch;
+    font-weight: 600;
+}
+
+.link-label{
+    font-size: 1.5ch;
+    margin-top: 2rem;
+}
+
+.close{
+    margin-left: 98%;
+    margin-bottom: 0;
+}
+
+.share-links2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-modal-header{
+    font-size: 3.4ch;
+    text-align: center;
+}
+
+.share-links2 span{
+    font-weight: 600;
+    font-size: 2ch;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    color: gray;
+}
+
+.share-links2 button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-top: -1rem;
+    color: rgb(255, 130, 13);
+    font-size: 2.3ch;
+}

@@ -1,0 +1,44 @@
+
+
+.poll-header{
+    font-size: 3.5ch;
+    margin:0
+}
+.polls p{
+    font-size: 2ch;
+    margin-bottom: 4rem;
+}
+.poll-container{
+    background-color: white;
+    cursor: pointer;
+    padding: 4rem;
+    border-radius: 5px;
+    width: 45vw;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 4rem;
+    transition: all 0.9s ease-in-out;
+}
+.poll-container:hover{
+    box-shadow: rgba(30, 40, 53, 0.096) 0px 22px 70px 4px;
+}
+
+.poll-container h2{
+    font-size: 3.5ch;
+}
+.vote-count{
+    opacity: 60%;
+    background-color: white;
+    border: 3.5px solid greenyellow;
+    width: 5rem;
+    border-radius: 130px;
+    padding: 0.9rem;
+    margin-top: -5.6rem;
+    margin-left: -5rem;
+}
+.polls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

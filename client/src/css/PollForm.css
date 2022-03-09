@@ -1,0 +1,89 @@
+body,html{
+    background: url('/public/svgs/scattered-forcefields.svg');
+}
+.poll-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    width: 100vw;
+    
+}
+.poll-question{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+.poll-question label{
+    font-size: 2ch;
+    align-self: flex-start;
+}
+.poll-question input{
+    font-size: 1.7ch;
+    text-align: justify;
+    padding:1.5rem;
+    width: 40vw;
+    height: 4rem;
+}
+
+.poll-option{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    
+}
+.poll-option label{
+    font-size: 2ch;
+    align-self: flex-start;
+}
+.poll-option input{
+    font-size: 1.7ch;
+    padding:1.5rem;
+    width: 40vw
+}
+
+label{
+    margin:0.5rem;
+}
+input{
+    border-radius: 4px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border: none;
+    transition: all 0.5s ease-in-out
+}
+input:focus{
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    
+}
+.form-wrapper button{
+    cursor: pointer;
+    padding: 1.4rem 1.7rem  ;
+    width: 20vw;
+    border: none;
+    background-color:rgba(61, 189, 29, 0.863) ;
+    color:white;
+    border-radius: 4px;
+    font-size: 2ch;
+    font-weight: 600;
+}
+
+.poll-form h2{
+    font-size: 3.5ch;
+}
+.poll-form p{
+    margin: 0;
+    font-size: 2ch;
+}

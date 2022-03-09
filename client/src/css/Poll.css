@@ -1,0 +1,76 @@
+.radio-option{
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 30vw;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+
+label p{
+    padding-top: 1rem;
+    font-size: 2.6ch;
+    margin-left: 0.7rem;
+    text-align:justify;
+}
+.poll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.poll h2{
+    width: 35vw;
+    text-align: justify;
+    font-size: 4ch;
+}
+input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+  }
+
+  
+  input[type='radio']:checked {
+    border: 8px solid rgb(81, 206, 255);
+    outline: unset !important /* I added this one for Edge (chromium) support */
+  }
+
+  input[type='radio']:checked {
+    border: 8px solid rgb(81, 206, 255);
+    outline: unset !important /* I added this one for Edge (chromium) support */
+  }
+
+  .radio-option:active{
+      margin-left:40rem;
+  }
+
+  .submit{
+      cursor: pointer;
+      padding: 1.5rem;
+      width: 15vw;
+      border-radius: 7px;
+      border: none;
+      margin-bottom: 4rem;
+      background-color: rgba(61, 189, 29, 0.863);
+      color: white;
+      font-size: 2.1ch;
+  }

@@ -1,0 +1,75 @@
+
+.login-modal{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding-top: 0;
+   width: 20vw;
+   height: 40%;
+   margin: auto;
+   margin-top: 7em;
+   background-color: rgb(255, 255, 255);
+   border-radius: 9px;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.login-modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(90, 90, 90, 0.418)
+  }
+
+.header-modal,.close, .sub-modal ,.logo-modal {
+    margin: 0;
+}
+.close{
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+    align-self: flex-end;
+    margin-right: 2px;
+    background: none;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+.close:hover{
+    background-color: #636363;
+    color: white;
+    border-radius: 2000px;
+}
+.fa-google {
+    font-size: 1.2rem;
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-button{
+    cursor: pointer;                
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 0.7rem;
+    margin: 0.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.login-button i{
+    flex: 0.6
+}
+
+
+
+.sub-modal{
+    margin: 1.4rem;
+    text-align: center;
+}
+

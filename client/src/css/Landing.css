@@ -1,0 +1,71 @@
+.home-wrapper{
+    display: flex;
+    padding: 6vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    font-size: 6ch;
+    margin: 0;
+}
+
+.poll-link{
+    background-color: rgba(61, 189, 29, 0.863);
+    padding: 1.4rem 1.7rem  ;
+    margin: 2rem;
+    border-radius: 5px;
+    color: white;
+    width: 10rem;
+    font-size: 2.5ch;
+    font-weight: 600;
+}
+
+.integrations-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.integration-icon{
+    margin: 2rem;
+}
+
+.integrations-header{
+    margin: 0.5rem 0rem;
+    font-size: 2.5ch;
+}
+
+.fa-slack{
+    font-size: 45px;
+    color: rgb(160, 160, 160);
+}
+
+.fa-telegram{
+    font-size: 45px;
+    color: rgb(160, 160, 160);
+}
+
+.fa-facebook-square{
+    font-size: 45px;
+    color: rgb(160, 160, 160);
+}
+
+.fa-whatsapp-square{
+    font-size: 45px;
+    color: rgb(160, 160, 160);
+}
+
+.fa-linkedin{
+    font-size: 45px;
+    color: rgb(160, 160, 160);
+}
+
+.typed-text{
+    color: rgb(255, 196, 118);
+}
+
+.header-span{
+    color: rgba(61, 189, 29, 0.863);
+}
