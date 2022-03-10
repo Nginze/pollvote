@@ -37,7 +37,7 @@
 .close:hover{
     background-color: #636363;
     color: white;
-    border-radius: 2000px;
+    border-radius: 50%;
 }
 .fa-google {
     font-size: 1.2rem;

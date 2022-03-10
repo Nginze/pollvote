@@ -1,8 +1,18 @@
 const {Router} = require('express')
 const router = Router()
 const Poll = require('../models/PollModel.js')
+const User = require('../models/userModel')
 
 const signVote = (req, res, next) => {
+    if(req.user){
+        User.updateOne(
+            {_id: req.user._id},
+            {$inc: {
+                "votes":1
+              }
+            },
+        ).then((res)=> {})
+    }
     if(!req.session.submittedVotes){
         req.session.submittedVotes = []
     }
@@ -28,7 +38,7 @@ const hasVoted = (req,res,next) => {
 }
 router.get('/public', (req, res) =>{
     
-    Poll.find().then(users => {res.json(users)})
+    Poll.find({visibility:"Public"}).then(users => {res.json(users)})
     
 })
 router.get('/public/:id',hasVoted, (req, res) =>{
@@ -40,8 +50,12 @@ router.get('/public/:id',hasVoted, (req, res) =>{
 router.post('/public', (req, res) =>{
    
     const newPoll = new Poll({
+        user_id: req.body.user_id,
+        user:req.body.user,
         question: req.body.question,
-        options: [{title:req.body.option1}, {title:req.body.option2}]
+        options: [{title:req.body.option1}, {title:req.body.option2}],
+        category: req.body.category,
+        visibility: req.body.visibility
     })
     newPoll.save()
 
@@ -66,5 +80,9 @@ router.post('/poll/:id',signVote, (req, res) =>{
      })
 })
 
+router.get('/user/:id', (req, res) => {
+    Poll.find({user_id: req.params.id})
+        .then((users)=>{res.json(users)})
+})
 module.exports = router
 

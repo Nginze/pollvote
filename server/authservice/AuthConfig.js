@@ -1,5 +1,6 @@
 const GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 const passport = require('passport')
+const User = require('../models/userModel')
 require('dotenv').config()
 
 passport.use(new GoogleStrategy({
@@ -9,7 +10,25 @@ passport.use(new GoogleStrategy({
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
-        done(null, profile)
+
+        User.findOne({googleId: profile.id})
+            .then((currentUser) => {
+                if(currentUser){
+                    done(null, currentUser)
+                }
+                else{
+                    new User({
+                        googleId: profile.id,
+                        username: profile.displayName,
+                        image: profile.picture,
+                        votes:0
+                    })
+                        .save()
+                        .then((newUser) => {done(null, newUser);console.log(newUser)})
+                }
+            })
+       
+        
   }
 ));
 

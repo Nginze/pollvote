@@ -8,9 +8,24 @@ import moment from 'moment';
 import 'animate.css'
 import ReactModal from 'react-modal';
 import { modalContext } from '../contexts/modalContext';
-
+import {userContext} from '../contexts/userContext'
 
 function PollResult() {
+    const colorMap = {
+      "Web Development":"#85feb5",
+      "Books":"#83c8fe",
+      "Drink":"#aec5e1",
+      "Movies":"#83c8fe",
+      "Politics":"#feaea7",
+      "Music":"#feaea7",
+      "News":"#aec5e1",
+      "Gaming":"#afbffe",
+      "Football":"#c9ffb7",
+      "History":"#ffb776",
+      "Sport": "#b7f1cd",
+      "Random":"#fffcb8"
+
+    }
     const [poll, setPoll] = useState(null)
     const [isLoading, setLoading] = useState(false)
     const [hasVoted, setVoted] = useState(null)
@@ -21,17 +36,17 @@ function PollResult() {
     const {id} = useParams()
     const getResult = (id) => {
         setLoading(true)
-        axios.get('http://localhost:8080/polls/public/' + id, {
-          withCredentials: true
-        })
-           .then(response => {
-             if(response){
-              setPoll(response.data.poll)
-              setVoted(response.data.hasVoted)
-              setLoading(false)
-             }
-           
-            })
+          axios.get('http://localhost:8080/polls/public/' + id, {
+            withCredentials: true
+          })
+            .then(response => {
+              if(response){
+                setPoll(response.data.poll)
+                setVoted(response.data.hasVoted)
+                setLoading(false)
+              }
+            
+              })
      }
 
      useEffect(() => {
@@ -118,7 +133,8 @@ function PollResult() {
        </ReactModal>
        <div className='results'>
             {isLoading && <Loader/>}
-            {poll && <h2 className='result-header'>{poll.question}<div><span>Asked about {moment(poll.date).fromNow()}</span></div></h2>}
+            {poll && <p style={{background:colorMap[poll.category]}}>{poll.category}</p>}
+            {poll && <h2 className='result-header'>{poll.question}<div><span>Asked by {poll.user} about {moment(poll.date).fromNow()}</span></div></h2>}
             {poll &&  poll.options.sort((a,b) => a.selections- b.selections).reverse().map((option) => {
                 
                 return <div className = {`option ${option.selections * 100/poll.votes > 50 ? highestVote : ""}`} key={option._id}>

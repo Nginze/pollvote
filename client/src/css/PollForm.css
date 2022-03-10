@@ -73,7 +73,7 @@ input:focus{
     padding: 1.4rem 1.7rem  ;
     width: 20vw;
     border: none;
-    background-color:rgba(61, 189, 29, 0.863) ;
+    background-color:#49d97f ;
     color:white;
     border-radius: 4px;
     font-size: 2ch;
@@ -87,3 +87,33 @@ input:focus{
     margin: 0;
     font-size: 2ch;
 }
+
+.poll-select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poll-select{
+    margin-bottom: 4rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.poll-select-container select{
+    font-size: 1.7ch;
+    padding:1.3rem;
+    width: 18vw;
+    border:none;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    transition: all 0.5s ease-in-out;
+}
+.poll-select-container select:focus{
+    border: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.poll-select-container label{
+    font-size: 2ch;
+    align-self: flex-start;
+}
+

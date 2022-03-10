@@ -11,7 +11,7 @@
 }
 
 .poll-link{
-    background-color: rgba(61, 189, 29, 0.863);
+    background-color: #49d97f;
     padding: 1.4rem 1.7rem  ;
     margin: 2rem;
     border-radius: 5px;
@@ -67,5 +67,5 @@
 }
 
 .header-span{
-    color: rgba(61, 189, 29, 0.863);
+    color: #49d97f;
 }

@@ -1,0 +1,68 @@
+.statistics-board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.statistics-container{
+    display: flex;
+    
+}
+.statistic{
+    background-color: white;
+    width: 17vw;
+    height: 38vh;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+
+}
+
+.statistic i{
+    margin: 1rem;
+    font-size: 1.3rem;
+    padding:1rem;
+    border-radius: 50%;
+}
+.statistic h2{
+    font-size: 5ch;
+}
+.statistic-header h2{
+    font-size: 5.5ch;
+    text-align: center;
+    margin: 1rem;
+}
+.statistic-header p{
+    margin: 2rem;
+}
+.fa-align-left{
+    background-color: rgba(139, 218, 255, 0.493);
+}
+
+.fa-check{
+    background-color: rgba(255, 255, 130, 0.678);
+}
+.fa-comment{
+    background-color: rgba(192, 131, 250, 0.329);
+}
+
+.no-polls-alert{
+    font-size: 2.4ch;
+    margin-bottom: 2rem;
+}
+.no-polls-alert i{
+    margin-right: 1rem;
+    color: #16161642;
+}
+
+.user-posts h2{
+    font-size: 4ch;
+    margin-top: 4rem;
+}
+
+.popular-polls-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

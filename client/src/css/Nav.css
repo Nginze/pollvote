@@ -1,4 +1,15 @@
 
+img {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 2rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+img:hover{
+    transform: scale(1.05);
+}
 .navbar{
     background-color: transparent;
     display: flex;

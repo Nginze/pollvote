@@ -11,7 +11,7 @@ const MongoStore = require('connect-mongo')
 const { Cookie } = require('express-session')
 require('dotenv').config()
 require('./authservice/AuthConfig.js')
-const connection = mongoose.connect('mongodb+srv://Jonathan:guuk12jona@cluster0.vnne0.mongodb.net/Polls', { useNewUrlParser: true,  useUnifiedTopology: true  },(err)=>{
+const connection = mongoose.connect('mongodb+srv://Jonathan:guuk12jona@cluster0.vnne0.mongodb.net/pollVote', { useNewUrlParser: true,  useUnifiedTopology: true  },(err)=>{
     if(err){
         console.log(err)
     }

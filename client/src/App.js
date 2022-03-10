@@ -10,6 +10,7 @@ import Footer from './components/Footer.js';
 import PollForm from './components/PollForm';
 import PollFeed from './components/PollFeed';
 import Login from './components/LoginModal';
+import Dashboard from './components/Dashboard';
 import {
   BrowserRouter,
   Routes,
@@ -17,6 +18,8 @@ import {
 } from "react-router-dom";
 import PollResult from './components/PollResult';
 import Poll from './components/Poll';
+import ProtectedRoutes from './components/ProtectedRoutes';
+import ProtectPoll from './components/ProtectPoll';
 
 
 ReactModal.setAppElement('#root');
@@ -37,7 +40,13 @@ function App() {
                   <Route path='/public' element={<PollFeed/>}/>
                   <Route path='/new' element={<PollForm/>}/>
                   <Route path='poll/result/:id' element={<PollResult/>}/>
-                  <Route path= 'poll/:id' element={<Poll/>}/>
+                  <Route element={<ProtectPoll/>}>
+                       <Route path= 'poll/:id' element={<Poll/>}/>
+                  </Route>
+                  <Route element={<ProtectedRoutes/>}>
+                       <Route path='/dashboard/:id' element= {<Dashboard/>}/>
+                  </Route>
+                  <Route path= '*' element={<Landing/>}/>
               </Routes>
               <Footer/>
       </PollProvider>

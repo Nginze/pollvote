@@ -53,9 +53,9 @@ function Poll() {
             })
    }
   return (
-    <div className='poll'>
+     <div className='poll'>
        {isLoading && <Loader/>}
-        <h2>{poll && poll.question}</h2>
+        {!isLoading && <h2>{poll && poll.question}</h2>}
         {poll && poll.options.map((option)=>{
             return (
                 <label key={option._id}>
