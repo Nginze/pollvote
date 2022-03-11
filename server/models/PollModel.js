@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 var PollSchema = new Schema({
+    
     user_id:{
         type: String,
         default: process.env.PUBLIC_POST_ID
@@ -40,6 +41,18 @@ var PollSchema = new Schema({
         type:Number,
         required: false,
         default: 0
+    },
+    multipleVotes: {
+        type: Boolean,
+        required: true
+    },
+    loginToVote: {
+        type: Boolean,
+        required: true
+    },
+    addComments:{
+        type: Boolean,
+        required: true
     },
     date:{
         type:Date,

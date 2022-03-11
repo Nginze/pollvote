@@ -1,8 +1,6 @@
 import React, { useContext, useState } from 'react'
 import '../css/PollForm.css'
 import axios from 'axios'
-import Login from './LoginModal'
-import { useNavigate } from 'react-router'
 import { userContext } from '../contexts/userContext'
 
 
@@ -12,8 +10,10 @@ function PollForm() {
   const [option2, setoption2] = useState('')
   const [category, setCategory] = useState('Web Development')
   const [visibility, setVisibility] = useState('Public')
+  const [multipleVotes, setMultipleVotes] = useState(false)
+  const [loginToVote, setLoginToVote] = useState(false)
+  const [addComments, setAddComments] = useState(false)
   const {user} = useContext(userContext)
-  const navigate = useNavigate()
   const submit = (e)=>{
     e.preventDefault()
     const poll = {
@@ -23,7 +23,10 @@ function PollForm() {
       option1,
       option2,
       category, 
-      visibility
+      visibility,
+      multipleVotes,
+      loginToVote,
+      addComments
     }
     axios({
       method: 'post',
@@ -76,11 +79,32 @@ function PollForm() {
                         <label for="poll-category"> Poll visibility</label>
                         <select value={visibility}  onChange ={(e)=>{setVisibility(e.target.value)}}name="poll-category" id="poll-category">
                           <option value="Public">Public</option>
-                          <option value="Private">Private</option>
+                          {user ? <option value="Private">Private</option> : <option value="Private" disabled='disabled' >Private(login to create a private post)</option>}
                         </select>
                     </div>
                 </div>
-                
+                <label>Poll options</label>
+                <div className='poll-options'>
+                  <div>
+                    
+                    <div className='setting'>
+                      <input value={multipleVotes} onChange={(e)=>{setMultipleVotes(e.target.checked)}} type='checkbox'/>
+                      Allow Multiple Votes
+                    </div >
+                  </div>
+               
+                  <div className='setting'>
+                   
+                    <input  value={loginToVote} onChange={(e)=>{setLoginToVote(e.target.checked)}} type='checkbox'/>
+                      Login to Vote
+
+                  </div>
+                  <div className='setting'>
+                    <input value={addComments} onChange={(e)=>{setAddComments(e.target.checked)}} type='checkbox'/>
+                    Add Comments
+                  </div>
+                </div>
+               
                 <button onClick={submit}>Create Poll</button>
           </div>
         </form>

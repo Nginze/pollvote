@@ -107,6 +107,7 @@ function Dashboard() {
                               <div className='tag' style={{background:colorMap[poll.category]}}>{poll.category}</div>
                               <h2>{poll.question}</h2>
                               <span>Created about {moment(poll.date).fromNow()}</span>
+                              <p className='visibility'>{poll.visibility == "Public" ? <i class="fa-solid fa-unlock"></i> : <i class="fa-solid fa-lock"></i> }</p>
                         </div>
              })}
             

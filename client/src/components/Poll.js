@@ -1,9 +1,12 @@
 import axios from 'axios'
 import {React, useState, useEffect, useContext} from 'react'
+import ReactModal from 'react-modal'
 import { useParams, useNavigate } from 'react-router'
 import { modalContext } from '../contexts/modalContext'
+import { userContext } from '../contexts/userContext'
 import '../css/Poll.css'
 import Loader from './Loader'
+
 
 
 
@@ -13,9 +16,13 @@ function Poll() {
     const [poll, setPoll] = useState(null)
     const [option, setOption] = useState('')
     const [isLoading, setLoading] = useState(false)
-    const {isOpen2, setOpen2} = useContext(modalContext)
+    const {setOpen2} = useContext(modalContext)
+    const {user} = useContext(userContext)
     const {id} = useParams()
     const navigate = useNavigate()
+    const googleAuth = () => {
+        window.open('http://localhost:8080/auth/google')
+      }
     const getResult = (id) => {
         setLoading(true)
         axios.get('http://localhost:8080/polls/public/' + id, {
@@ -52,9 +59,24 @@ function Poll() {
                 }
             })
    }
+
   return (
      <div className='poll'>
-       {isLoading && <Loader/>}
+        {isLoading && <Loader/>}
+        {poll && !user && poll.loginToVote &&
+        <div className='modal-wrapper'>
+        <ReactModal className='login-modal animate__animated animate__fadeInRight animate__faster'
+                    overlayClassName = 'login-modal-overlay'
+                    isOpen={true}
+                   
+                    >
+            <h2 className='header-modal'>Sign in to</h2>
+            <h1 className='logo-modal'><i class="fa-solid fa-square-poll-vertical"></i> pollVote</h1> 
+            <p className='sub-modal'>Login to vote on this poll</p>
+            <button className='login-button' onClick={googleAuth}> <i className="fa-brands fa-google"></i>Sign in with Google</button>
+        </ReactModal>
+    </div>
+        }
         {!isLoading && <h2>{poll && poll.question}</h2>}
         {poll && poll.options.map((option)=>{
             return (

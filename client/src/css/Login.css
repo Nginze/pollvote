@@ -25,8 +25,12 @@
 .header-modal,.close, .sub-modal ,.logo-modal {
     margin: 0;
 }
+
+.header-modal{
+    margin-top: 2rem;
+}
 .close{
-    margin-top: -5rem;
+    margin-top: -3rem;
     margin-bottom: 2rem;
     align-self: flex-end;
     margin-right: 2px;

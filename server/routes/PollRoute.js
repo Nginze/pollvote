@@ -55,7 +55,11 @@ router.post('/public', (req, res) =>{
         question: req.body.question,
         options: [{title:req.body.option1}, {title:req.body.option2}],
         category: req.body.category,
-        visibility: req.body.visibility
+        visibility: req.body.visibility,
+        multipleVotes: req.body.multipleVotes,
+        loginToVote: req.body.loginToVote,
+        addComments: req.body.addComments
+      
     })
     newPoll.save()
 

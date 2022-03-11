@@ -8,7 +8,7 @@ import moment from 'moment';
 import 'animate.css'
 import ReactModal from 'react-modal';
 import { modalContext } from '../contexts/modalContext';
-import {userContext} from '../contexts/userContext'
+
 
 function PollResult() {
     const colorMap = {
@@ -32,7 +32,7 @@ function PollResult() {
     const [isOpen, setOpen] = useState(false)
     const {isOpen2, setOpen2} = useContext(modalContext)
     const highestVote = ' highest-vote'
-    const [fillColor, setFillColor] = useState("rgba(59, 219, 59, 0.616)")
+    const [fillColor] = useState("rgba(59, 219, 59, 0.616)")
     const {id} = useParams()
     const getResult = (id) => {
         setLoading(true)
@@ -145,9 +145,9 @@ function PollResult() {
             })}
 
        </div>
-
        {poll && <div className='mini-dash'>
-          { hasVoted ? <div className='vote-alert'><i class="fa-solid fa-circle-exclamation"></i>You have voted on this poll already</div> : <a href={'/poll/'+ id }className='submit-vote'>Submit Vote</a>}
+
+          {hasVoted ? <div className='vote-alert'><i class="fa-solid fa-circle-exclamation"></i>You have voted on this poll already</div> : <a href={'/poll/'+ id }className='submit-vote'>Submit Vote</a>}
            <div className='display'>
                 <div className='vote-data'>
                   <span>Votes</span> 

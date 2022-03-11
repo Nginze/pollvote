@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 import { Outlet, useParams } from 'react-router'
+
 import Landing from './Landing'
 import Loader from './Loader'
 
@@ -29,7 +30,7 @@ function ProtectPoll() {
   return (
       <>
         {isLoading && <div style={{display:"flex", justifyContent: "center", height:'100vh'}}>{isLoading && <Loader/>}</div>}
-        {hasVoted != true ? <Outlet/> : <Landing/>}
+        {hasVoted !== true ? <Outlet/> : <Landing/>}
       </>
    
   )

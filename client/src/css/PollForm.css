@@ -34,7 +34,7 @@ body,html{
     font-size: 1.7ch;
     text-align: justify;
     padding:1.5rem;
-    width: 40vw;
+    width: 50vw;
     height: 4rem;
 }
 
@@ -51,7 +51,7 @@ body,html{
 .poll-option input{
     font-size: 1.7ch;
     padding:1.5rem;
-    width: 40vw
+    width: 50vw
 }
 
 label{
@@ -102,8 +102,9 @@ input:focus{
 .poll-select-container select{
     font-size: 1.7ch;
     padding:1.3rem;
-    width: 18vw;
+    width: 24vw;
     border:none;
+    border-radius: 5px;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     transition: all 0.5s ease-in-out;
 }
@@ -117,3 +118,28 @@ input:focus{
     align-self: flex-start;
 }
 
+.poll-options .setting{
+    
+    padding: 1.4rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border: none;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    width: 12vw;
+    font-size: 1.9ch;
+}
+.poll-options input{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+
+label{
+   font-size: 2ch;
+ 
+}
