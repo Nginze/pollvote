@@ -38,7 +38,7 @@ export default function Nav() {
             {user && <a href={`/dashboard/${user._id}/${user.username}`}><img src={user.image}/></a>}
             <a id = 'public-polls'href='/public'>Public polls</a>
             <a id='create-poll' href='/new'>Create Poll</a>
-            {!user ? <button onClick={()=>{setIsOpen(true)}}>Login</button> : <button id='logout' onClick={()=>{logout()}}>Logout</button>}
+            {!user ? <button onClick={()=>{setIsOpen(true)}}>Login</button> : <button id='logout' onClick={()=>{logout()}}>Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>}
         </div>
     </div>
   )

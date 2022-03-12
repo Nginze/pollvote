@@ -34,7 +34,10 @@ function PollForm() {
       withCredentials: true,
       data:poll
       })
-      .then(window.open('/public', "_self"))
+      .then((response)=>{
+        window.open(`/poll/result/${response.data._id}`, "_self")
+       
+      })
       .catch(err => {console.log(err)})
       
 
@@ -73,6 +76,11 @@ function PollForm() {
                           <option value="History">History</option>
                           <option value="Sport">Sport</option>
                           <option value="Random">Random</option>
+                          <option value="Art">Art</option>
+                          <option value="Food">Food</option>
+                          <option value="Sport">Sport</option>
+                          <option value="Lifestyle">Lifestyle</option>
+                          
                         </select>
                     </div>
                     <div className='poll-select'>

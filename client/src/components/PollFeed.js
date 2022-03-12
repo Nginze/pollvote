@@ -19,12 +19,16 @@ function PollFeed() {
      "Movies":"#83c8fe",
      "Politics":"#feaea7",
      "Music":"#feaea7",
-     "News":"aec5e1",
+     "News":"#aec5e1",
      "Gaming":"#afbffe",
      "Football":"#c9ffb7",
      "History":"#ffb776",
      "Sport": "#b7f1cd",
-     "Random":"#fffcb8"
+     "Random":"#fffcb8",
+     "Art":"#fe7776",
+     "Food":"#6c40e2",
+     "Sport": "#c8ffb6",
+     "Lifestyle":"#fbea95",
 
   }
   
@@ -34,7 +38,7 @@ function PollFeed() {
   return (
     <div className='polls'>
       
-         <h2 className='poll-header'>Public Polls</h2>
+         <h2 className='poll-header'>Recent Polls</h2>
          <p>Below are the public polls created by pollVote users</p>
          {isLoading && <Loader/>}
 

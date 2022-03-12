@@ -15,21 +15,25 @@ import QRCode from "react-qr-code";
 
 
 function PollResult() {
-    const colorMap = {
-      "Web Development":"#85feb5",
-      "Books":"#83c8fe",
-      "Drink":"#aec5e1",
-      "Movies":"#83c8fe",
-      "Politics":"#feaea7",
-      "Music":"#feaea7",
-      "News":"#aec5e1",
-      "Gaming":"#afbffe",
-      "Football":"#c9ffb7",
-      "History":"#ffb776",
-      "Sport": "#b7f1cd",
-      "Random":"#fffcb8"
+  const colorMap = {
+    "Web Development":"#85feb5",
+    "Books":"#83c8fe",
+    "Drink":"#aec5e1",
+    "Movies":"#83c8fe",
+    "Politics":"#feaea7",
+    "Music":"#feaea7",
+    "News":"#aec5e1",
+    "Gaming":"#afbffe",
+    "Football":"#c9ffb7",
+    "History":"#ffb776",
+    "Sport": "#b7f1cd",
+    "Random":"#fffcb8",
+    "Art":"#fe7776",
+    "Food":"#6c40e2",
+    "Sport": "#c8ffb6",
+    "Lifestyle":"#fbea95",
 
-    }
+ }
     const [poll, setPoll] = useState(null)
     const [isLoading, setLoading] = useState(false)
     const [hasVoted, setVoted] = useState(null)
@@ -140,7 +144,7 @@ function PollResult() {
                           <a onClick={()=>{setOpen(true); setOpen2(false)}}><i class="fa-solid fa-link"></i> Share to clipboard</a>
                           <a href={`https://wa.me/?text=What is your take on this!?-Vote now at http://localhost:3000/poll/${id}`} target='_blank' className='whatsapp-link'>    <i class="fa-brands fa-whatsapp"></i> Share to Whatsapp</a>
                           <a href = {`http://twitter.com/share?text=What is your take on this!?-Vote now at&url=http://localhost:3000/poll/${id}`} target='_blank' className='twitter-link'><i class="fa-brands fa-twitter"></i> Share to twitter</a>
-                          <a onClick={()=>{setOpen3(true);setOpen2(false)}} id='QR-code'><i class="fa-solid fa-qrcode"></i> Share QR code</a>
+                          <a onClick={()=>{setOpen3(true);setOpen2(false)}} id="QR-thankyou"><i class="fa-solid fa-qrcode"></i> Share QR code</a>
                         </div>
                     </div>
             </div>
@@ -199,7 +203,7 @@ function PollResult() {
           </div>
           {poll && <div className='mini-dash'>
 
-              {hasVoted ? <div className='vote-alert'><i class="fa-solid fa-circle-exclamation"></i>You have voted on this poll already</div> : <a href={'/poll/'+ id }className='submit-vote'>Submit Vote</a>}
+              {hasVoted ? <div className='vote-alert'><i class="fa-solid fa-circle-exclamation"></i>You have voted on this poll already</div> : <a href={'/poll/'+ id }className='submit-vote'>Submit Vote<i class="fa-solid fa-check-to-slot"></i></a>}
               <div className='display'>
                     <div className='vote-data'>
                       <span>Votes</span> 

@@ -9,3 +9,12 @@
 .fa-heart:hover{
     transform: scale(1.05);
 }
+
+.heart-container{
+    display: flex;
+    
+}
+.like-prompt{
+    color: #f83c71;
+    margin-left: 1rem;
+}

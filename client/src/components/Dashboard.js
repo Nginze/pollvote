@@ -28,8 +28,13 @@ function Dashboard() {
     "Football":"#c9ffb7",
     "History":"#ffb776",
     "Sport": "#b7f1cd",
-    "Random":"#fffcb8"
-  }
+    "Random":"#fffcb8",
+    "Art":"#fe7776",
+    "Food":"#6c40e2",
+    "Sport": "#c8ffb6",
+    "Lifestyle":"#fbea95",
+
+ }
   const getUser = () => {
     setLoading(true)
     axios({
