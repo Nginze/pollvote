@@ -44,7 +44,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 6px;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: -2rem;
    
 }
@@ -68,14 +68,22 @@
 .submit-vote{
     background-color: #40da7b;
     color: white;
-    width: 17vw;
-    padding: 1.6rem 4rem;
+    width: 100%;
+    padding: 1.6rem ;
+    width: 90%;
+    min-width: 90%;
     border-radius: 10px;
     font-size: 2ch;
     transition: all 1s ;
 }
 .submit-vote:hover{
     background-color: #38bd6b;
+}
+.mini-dash{
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .option span{
     margin-left: 0.6rem;
@@ -162,7 +170,7 @@
     margin: 0.4rem;
 }
 .highest-vote{
-    margin-left: 2rem;
+    margin-left: 1rem;
     border: 3.4px solid rgba(59, 219, 59, 0.616);
     box-shadow: rgba(0, 255, 76, 0.253) 0px 7px 29px 0px;
 }
@@ -301,4 +309,38 @@
 
 .fa-check-to-slot{
     margin-left: 0.6rem;
+}
+
+@media (max-width:900px){
+    .mini-dash{
+        display: none;
+    
+    }
+    .option{
+        background-color: white;
+        padding: 2rem;
+        border-radius: 5px;
+        max-width: 75%;
+        min-width: 65%;
+        width: 85vw;
+        margin:auto;
+        margin-bottom: 8vh;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      
+        
+    }
+    .result-header{
+        width: 70vw;
+        font-size: 4ch;
+        text-align: justify;
+        margin-left:2.4rem;
+        flex-wrap: wrap;
+        
+        
+       
+    }
+  
+    .results p{
+      margin-left: 2.4rem;
+    }
 }

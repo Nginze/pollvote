@@ -178,7 +178,7 @@ function PollResult() {
             
           }}>
             <button className='close' onClick={()=>{setOpen(false)}}><i class="fa-solid fa-xmark"></i></button>
-            <h2 className='copy-modal-header'>Share link</h2>
+            <h2 className='copy-modal-header'>Share link <i class="fa-solid fa-share-nodes"></i></h2>
             <span className='copy-modal-sub'>Copy a link below to easily share this poll</span>
             <p className='link-label'>Poll results link</p>
             <div className='copy'><p>http://localhost:3000/poll/result/{id}</p><button onClick={() =>  navigator.clipboard.writeText(`http://localhost:3000/poll/result/${id}`)} >Copy Link</button></div>

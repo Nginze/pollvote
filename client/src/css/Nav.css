@@ -87,3 +87,78 @@ img:hover{
 #logout:hover{
     background-color: #3a84d8;
 }
+
+.hamburger{
+    display: none;
+}
+
+
+@media (max-width:700px){
+
+    .nav-features{
+        z-index: 10;
+        position: fixed;
+        top: 0rem;
+        left: -200%;
+        flex-direction: column;
+        background-color: #2b2a33;
+        width: 50%;
+        height: 100vh;
+        text-align: justify;
+        align-items: baseline;
+        justify-content: flex-start;
+        padding: 2rem;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-features a{
+        color: #fcfcfc;
+        margin-bottom: 2rem;
+        font-size: 2ch;
+    }
+    #logout, .nav-features button{
+        font-size: 1.3ch;
+        margin-left: 1.2rem;
+        
+    }
+    
+  
+    .hamburger{
+        display: block;
+    }
+    .active{
+        left:0;
+    }
+
+    #public-polls{
+        color: #ffffff;
+        transition: all 1s;
+    }
+    #public-polls:hover{
+        color: #ffffff;
+    }
+    
+    #create-poll{
+        color: #ffffff;
+        transition: all 0.6s;
+    }
+    #create-poll:hover{
+        color: #ffffff;
+    }
+    .nav-features button{
+        background-color: #49d97f;
+        font-weight: 500;
+        width: 5rem;
+        transition: all 0.6s ;
+        border: 1.7px solid;
+        padding: 0.8rem;
+        border-radius: 3px;
+    }
+    
+    .nav-features button:hover{
+        background-color: #43c977;
+        border: 1.7px solid #49d97f;
+    }
+    
+}

@@ -46,19 +46,19 @@ function PollForm() {
     <div className='poll-form'>
         <h2>Create a poll</h2>
         <p>Complete the fields below to create your poll</p>
-        <form>
+        <form >
           <div className='form-wrapper'>
                 <div className='poll-question'>
                     <label for='pollquestion'>Poll question</label>
-                    <input name='pollquestion' placeholder='Eg. What is you favourite video game' value = {question} onChange={(e)=>{setquestion(e.target.value)}}/>
+                    <input name='pollquestion' required placeholder='Eg. What is you favourite video game' value = {question} onChange={(e)=>{setquestion(e.target.value)}}/>
                 </div>
                 <div className='poll-option'>
                     <label for='option1'>Option 1</label>
-                    <input name='option1' placeholder='Eg. Option1' value={option1} onChange={(e)=>{setoption1(e.target.value)}}/>
+                    <input name='option1' required placeholder='Eg. Option1' value={option1} onChange={(e)=>{setoption1(e.target.value)}}/>
                 </div>
                 <div className='poll-option'>
                     <label for='option2'>Option 2</label>
-                    <input name='option2' placeholder='Eg. Option2' value={option2} onChange={(e)=>{setoption2(e.target.value)}}/>
+                    <input name='option2' required placeholder='Eg. Option2' value={option2} onChange={(e)=>{setoption2(e.target.value)}}/>
                 </div>
                 <div className='poll-select-container'>
                     <div className='poll-select'>
@@ -103,7 +103,7 @@ function PollForm() {
                
                   <div className='setting'>
                    
-                    <input  value={loginToVote} onChange={(e)=>{setLoginToVote(e.target.checked)}} type='checkbox'/>
+                    <input value={loginToVote} onChange={(e)=>{setLoginToVote(e.target.checked)}} type='checkbox'/>
                       Login to Vote
 
                   </div>
@@ -113,7 +113,7 @@ function PollForm() {
                   </div>
                 </div>
                
-                <button onClick={submit}>Create Poll</button>
+                 {question && option1 && option2 ? <button type='submit' onClick={submit}>Create Poll <i class="fa-solid fa-check-to-slot"></i></button> : <button type='submit' id ='disabled' disabled onClick={submit}>Create Poll <i className="fa-solid fa-ban"></i></button>} 
           </div>
         </form>
         

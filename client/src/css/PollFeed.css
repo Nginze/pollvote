@@ -57,3 +57,49 @@
     font-family: 'Poppins', sans-serif;
     
 }
+
+@media (max-width:700px){
+    .poll-container{
+        background-color: white;
+        cursor: pointer;
+        padding: 4rem;
+        border-radius: 5px;
+        width: 45Vw;
+        height: 8vh;
+        border: none;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-bottom: 4rem;
+        transition: all 0.9s ease-in-out;
+    }
+    .poll-container h2{
+        font-size: 2.5ch;
+        text-align: justify;
+    }
+    .vote-count{
+        opacity: 60%;
+        background-color: #f7fffb;
+        border: 3.5px solid greenyellow;
+        width: 4rem;
+        border-radius: 130px;
+        font-weight: 600;
+        padding: 0.7rem;
+        margin-top: -5.1rem;
+        margin-left: -5rem;
+    }
+    .poll-container .tag{
+        background-color: rgba(192, 131, 250, 0.329);
+        font-size: 1ch;
+        width: 6rem;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.795);
+        margin-top: 1rem;
+        padding: 0.3rem;
+        border-radius: 5px;
+        font-weight: 650;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+}

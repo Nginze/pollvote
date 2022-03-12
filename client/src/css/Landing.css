@@ -73,3 +73,24 @@
 .header-span{
     color: #49d97f;
 }
+
+@media (max-width:700px){
+    .header{
+       
+        width: 100vw;
+        font-size: 4ch;
+      
+    }
+    .header-container{
+        margin-top: 4rem
+    }
+    .poll-link{
+        width: 8rem;
+        font-size: 1.9ch;
+    }
+    .integration-icon{
+        margin: 2rem;
+    }
+   
+   
+}

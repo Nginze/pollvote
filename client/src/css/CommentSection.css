@@ -1,7 +1,6 @@
 .comment-section {
     display: flex;
     flex-direction: column;
-   
     padding: 5rem;
     justify-content: center;
     align-items: baseline;
@@ -37,6 +36,7 @@
     cursor: pointer;
     border: none;
     border-radius: 0.3rem;
+    min-width: 11vw;
     width: 12vw;
     padding: 1.5rem;
     margin-top: 1.5rem;
@@ -122,6 +122,7 @@ hr {
     width: 15vw;
     padding: 1rem;
     background-color: #4b9fffce;
+    min-width: 12vw;
     color: white;
     transition: all 1s ease-in-out;
 }
@@ -146,3 +147,106 @@ hr {
     width: 80vw;
 }
 
+@media (max-width: 1300px){
+    #comment-login{
+        min-width: 30vw;
+        font-size: 1.5ch;
+        width: 22vw;
+        padding: 1rem;
+        background-color: #4b9fffce;
+        min-width: 12vw;
+        color: white;
+        transition: all 1s ease-in-out;
+    }
+}
+
+@media (max-width: 900px){
+   #comment-login-prompt{
+       font-size: small;
+       margin: auto;
+       padding:0;
+       width: 90%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   #comment-login{
+    align-self: center;
+    width: 50%;
+    text-align: center;
+    font-size: small;
+  
+   }
+}
+@media (max-width: 700px){
+    #comment-login{
+        align-self: center;
+        font-size: 0.5ch;
+        text-align: center;
+        font-size: small;
+      
+    }
+    .comment-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: baseline;
+        width: 100vw;
+    
+    }
+    
+    .comment-form div{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .comment-form img{
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+    .comment-form-wrapper button {
+        font-weight: 700;
+        cursor: pointer;
+        font-size: smaller;
+        border: none;
+        border-radius: 0.3rem;
+        min-width: 11vw;
+        width: 55%;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+       
+    }
+    .comment{
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        margin: 0;
+        width: 50vw;
+        font-size: smaller;
+      
+    }
+    .comments-header {
+        font-size: smaller;
+    }
+    .comment-form input{
+        font-size: 2ch;
+        padding: 2rem;
+       
+    }
+    
+    .comment-form img{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .content span{
+        font-weight: 600;
+        font-size: x-small;
+    }
+}

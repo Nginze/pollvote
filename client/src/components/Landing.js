@@ -6,7 +6,7 @@ import TypeAnimation from 'react-type-animation'
 export default function () {
   return (
     <div className='home-wrapper'>
-      
+      <div className='header-container'>
         <h2 className='header'>Fast, instant <span className='header-span'>realtime</span> polls</h2> 
         <h2 className='header'>for any
            <TypeAnimation
@@ -18,6 +18,7 @@ export default function () {
 
             />
        </h2> 
+      </div>
         <a className='poll-link' href='/new'> Create your poll</a>
         <p className='sub'>No registration required, it's 100% free and takes less than a minute.</p>
         <div className='integrations'>

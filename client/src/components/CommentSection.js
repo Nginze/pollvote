@@ -76,8 +76,8 @@ function CommentSection() {
           <div className='comment-form'>
           { user && <img src= {user.image}></img>}
             <div className='comment-form-wrapper'>
-              <input value={comment} onChange = {(e)=>{setComment(e.target.value)}}className='comment-input' placeholder='Write comment'/>
-              <button onClick={postComment}>Post comment <i class="fa-solid fa-paper-plane"></i> </button>
+              <input required value={comment} onChange = {(e)=>{setComment(e.target.value)}}className='comment-input' placeholder='Write comment'/>
+              {comment ? <button onClick={postComment}>Post comment <i class="fa-solid fa-paper-plane"></i> </button> : <button id='disabled' disabled onClick={postComment}>Post comment  <i class="fa-solid fa-ban"></i> </button> }
             </div> 
             
                 </div>
