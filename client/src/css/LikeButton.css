@@ -1,0 +1,11 @@
+.fa-heart{
+    color: #f83c71;
+    font-size: 2.6ch;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 4s all;
+}
+
+.fa-heart:hover{
+    transform: scale(1.05);
+}

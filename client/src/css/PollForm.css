@@ -78,8 +78,11 @@ input:focus{
     border-radius: 4px;
     font-size: 2ch;
     font-weight: 600;
+    transition: all 1s;
 }
-
+.form-wrapper button:hover{
+    background-color: #3dbb6d;
+}
 .poll-form h2{
     font-size: 3.5ch;
 }

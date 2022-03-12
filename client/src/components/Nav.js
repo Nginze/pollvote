@@ -23,7 +23,6 @@ export default function Nav() {
     })
       .then(response => {
         if(response){
-          console.log(response)
           setUser(null)
           navigate('/')
 
@@ -36,10 +35,10 @@ export default function Nav() {
     <div className='navbar'>
         <a className='logo' href='/'><i class="fa-solid fa-square-poll-vertical"></i> pollVote</a>
         <div className='nav-features'>
-            {user && <a href={`/dashboard/${user._id}`}><img src={user.image}/></a>}
+            {user && <a href={`/dashboard/${user._id}/${user.username}`}><img src={user.image}/></a>}
             <a id = 'public-polls'href='/public'>Public polls</a>
             <a id='create-poll' href='/new'>Create Poll</a>
-            {!user ? <button onClick={()=>{setIsOpen(true)}}>Login</button> : <button onClick={()=>{logout()}}>Logout</button>}
+            {!user ? <button onClick={()=>{setIsOpen(true)}}>Login</button> : <button id='logout' onClick={()=>{logout()}}>Logout</button>}
         </div>
     </div>
   )

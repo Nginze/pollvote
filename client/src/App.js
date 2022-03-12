@@ -44,7 +44,7 @@ function App() {
                        <Route path= 'poll/:id' element={<Poll/>}/>
                   </Route>
                   <Route element={<ProtectedRoutes/>}>
-                       <Route path='/dashboard/:id' element= {<Dashboard/>}/>
+                       <Route path='/dashboard/:id/:username' element= {<Dashboard/>}/>
                   </Route>
                   <Route path= '*' element={<Landing/>}/>
               </Routes>

@@ -1,0 +1,148 @@
+.comment-section {
+    display: flex;
+    flex-direction: column;
+   
+    padding: 5rem;
+    justify-content: center;
+    align-items: baseline;
+
+}
+.comment-form{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+   
+}
+
+.comment-form input{
+    font-size: 2ch;
+    padding: 3rem;
+    width: 40vw;
+    margin-left: 1rem;
+}
+
+.comment-form div{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.comment-form img{
+    width: 3.4rem;
+    height: 3.4rem;
+}
+.comment-form-wrapper button {
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    width: 12vw;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-size: 1.6ch;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #4198fe;
+    transition: all 1s ;
+}
+.comment-form-wrapper button:hover{
+    background-color: #3577c2;
+}
+.fa-paper-plane{
+    margin-left: 0.8rem;
+}
+.comments-header{
+   width: 50vw;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.comments-header h2{
+    font-size: 4ch;
+}
+
+.comment-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+}
+.comment{
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+    border-radius: 4px;
+    margin: 0;
+    width: 50vw;
+  
+}
+
+.comment img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.content{
+    text-align: justify;
+    margin-left: 2rem;
+    padding-top: 2.5rem;
+}
+
+hr {
+    height: 0.01px;
+    opacity: 18%;
+    
+}
+.content h3{
+    font-size: 2.3ch;
+}
+.content p {
+    font-size: 2.3ch;
+    font-weight: 400;
+}
+.content span{
+    font-weight: 600;
+    opacity: 60%;
+    display: flex;
+    align-items: center;
+}
+.likes-count{
+    margin-left: 0.5rem;
+    color: #ff9dac;
+}
+
+#comment-login{
+    width: 15vw;
+    padding: 1rem;
+    background-color: #4b9fffce;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+#comment-login:hover{
+    box-shadow: rgba(30, 40, 53, 0.096) 0px 22px 70px 4px;
+}
+
+#comment-login-prompt { 
+    padding-left: 13rem;
+
+}
+
+#comment-login-prompt h2{
+    font-size: 4ch;
+    margin: 0;
+}
+#comment-login-prompt p{
+    margin-bottom: 2rem;
+}
+#comment-border{
+    width: 80vw;
+}
+

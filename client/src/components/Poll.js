@@ -49,7 +49,8 @@ function Poll() {
             url: 'http://localhost:8080/polls/poll/' + id,
             withCredentials: true,
             data:{
-                option
+                option,
+                multipleVotes: poll.multipleVotes
             }
         })
             .then((response)=>{

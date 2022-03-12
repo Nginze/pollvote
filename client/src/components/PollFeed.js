@@ -30,7 +30,7 @@ function PollFeed() {
   
   const {polls, isLoading} = useContext(pollContext)
   const navigate = useNavigate()
-
+  
   return (
     <div className='polls'>
       

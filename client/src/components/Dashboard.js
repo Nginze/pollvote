@@ -8,11 +8,13 @@ import axios from 'axios'
 
 
 
+
 function Dashboard() {
-  const {id} = useParams()
+  const {id, username} = useParams()
   const [user, setUser] = useState(null)
   const [polls, setPolls] = useState(null)
   const [isLoading, setLoading] = useState(false)
+  const [comments, setComments] = useState(null)
 
   const colorMap = {
     "Web Development":"#85feb5",
@@ -39,7 +41,7 @@ function Dashboard() {
       if(response){
         setUser(response.data)
         setLoading(false)
-        console.log(response.data)
+       
       }
           
     })
@@ -56,17 +58,29 @@ function Dashboard() {
         if(response){
           
           setPolls(response.data)
+         
         }
         
       })
       .catch(err => {console.log(err)})
   }
- 
+  const getComments = () => {
+    axios.get('http://localhost:8080/polls/comments/user/' + username, {
+      withCredentials: true
+    })
+      .then(response => {
+        if(response){
+           setComments(response.data)
+        }
+      })
+  }
   const navigate = useNavigate()
 
   useEffect(() => {
     getUserPolls()
     getUser()
+    getComments()
+    
     
   },[]);
  
@@ -92,7 +106,7 @@ function Dashboard() {
                 </div>
                 <div className='statistic'>
                      <i className="fa-regular fa-comment"></i>
-                    <h2>0</h2>
+                    {comments && <h2>{comments.length}</h2>}
                     <span>Comments Posted</span>
                 </div>  
           </div>
